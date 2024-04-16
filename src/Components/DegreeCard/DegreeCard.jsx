@@ -1,4 +1,4 @@
-import { ContainerCard, ContainerDegreeCard, ContainerText, ContainerTextCard, ImageCard, TextCard, TitleCard } from "../UI Kit/DesignDegreeCard";
+import { ButtonCard, ContainerCard, ContainerDegree, ContainerDegreeCard, ContainerText, ContainerTextCard, ImageCard, TextCard, TitleCard } from "../UI Kit/DesignDegreeCard";
 import web from "../../assets/web.jpg";
 import js from "../../assets/js.jpeg";
 import programacion from "../../assets/programacion.jpg";
@@ -6,6 +6,7 @@ import software from "../../assets/software.jpg";
 
 export const DegreeCard = () => {
     return (
+        <ContainerDegree>
         <ContainerDegreeCard>
         <ContainerCard>
             <ImageCard src={web} alt="Curso de Desarrollo Web -UNSL-" />
@@ -64,5 +65,7 @@ export const DegreeCard = () => {
             </ContainerText>
         </ContainerCard>
         </ContainerDegreeCard>
+        <ButtonCard>Ver todas las carreras</ButtonCard>
+        </ContainerDegree>
     )
 };

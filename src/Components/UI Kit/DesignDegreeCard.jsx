@@ -1,5 +1,13 @@
 import styled from "styled-components";
-import {lightblue} from "../UI Kit/Variables";
+import {lightblue, blue, white} from "../UI Kit/Variables";
+
+export const ContainerDegree = styled.div`
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+`
 
 export const ContainerDegreeCard = styled.div`
     width: 90%;
@@ -65,5 +73,23 @@ export const TextCard = styled.p`
     margin: 0;
     @media(min-width: 1024px){ 
     font-size: .7rem;
+}
+`
+
+export const ButtonCard = styled.button`
+    background-color: ${blue};
+    color: ${white};
+    width: 60%;
+    height: 5vh;
+    margin: 0 auto;
+    border: none;
+    border-radius: 15rem;
+    font-size: .8rem;
+    font-family: "poppins";
+    box-shadow: 2px 2px rgb(0 0 0 / 0.5);
+    @media(min-width: 1024px){ 
+    width: 30%;
+    height: 8vh;
+    font-size: 1.2rem;
 }
 `
