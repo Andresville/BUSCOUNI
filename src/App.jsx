@@ -20,7 +20,9 @@ function App() {
       <Route path="/universities/:name" element={<UniversityDetailContainer />} />
       <Route path="/universities-degree/:carrera" element={<UniversitiesDegreeDetailContainer />} />
       </Routes>
+      <footer>
       <Footer />
+      </footer>
     </Router>
   )
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { blue } from "../UI Kit/Variables";
 
-export const FooterContainer = styled.header`
+export const FooterContainer = styled.footer`
 background-color: ${blue};
 display: flex;
 flex-direction: column;
@@ -9,17 +9,6 @@ margin: 3% 0 0 0;
 padding: 0;
 height: auto;
 align-items: center;
-@media(min-width: 640px){
-
-}
-
-@media(min-width: 768px){ 
-
-}
-
-@media(min-width: 1024px){ 
-
-}
 `
 
 export const TitleFooter = styled.h2`
@@ -38,9 +27,8 @@ export const TitleFooter = styled.h2`
 
 export const TextFooter = styled.p`
   margin: 0;
-  padding: .3% 0;
-  font-size: .6rem;
-  font-weight: 600;
+  padding: 0;
+  font-size: .5rem;
   @media(min-width: 1024px){
     font-size: .8rem;
   }
@@ -56,6 +44,6 @@ export const IconContain = styled.div`
 `
 
 export const Icon = styled.img`
-  width: 8%;
-  height: 8%;
+  width: 12%;
+  height: 12%;
 `
