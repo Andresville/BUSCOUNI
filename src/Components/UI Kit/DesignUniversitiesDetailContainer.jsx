@@ -3,14 +3,21 @@ import { blue } from "../UI Kit/Variables"
 
 export const Container = styled.div`
     display: flex;
+    flex-direction: column;
+    @media(min-width: 768px){
     flex-direction: row;
+  }
 `
 
 export const ContainerCard = styled.div`
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin: 2% 0 0 0;
+    @media(min-width: 1024px){
     width: 60%;
     margin: 5% 0 0 15%;
+  }
 `
 
 export const DetailContainer = styled.div`
@@ -21,7 +28,10 @@ export const DetailContainer = styled.div`
     height: auto;
     background-color: white;
     border-radius: 10px;
+    margin: 2% auto 0 auto;
+    @media(min-width: 1024px){
     margin: 1% 0;
+  }
 `
 
 export const LogoUniversities = styled.img`
@@ -51,6 +61,10 @@ export const TitleUniversities = styled.h3`
     color: ${blue};
     margin: 0;
     padding: 2% 0 1% 0;
+    font-size: .8rem;
+    @media(min-width: 1024px){
+    font-size: 1.2rem;
+  }
 `
 
 export const TextContainerUniversities = styled.div`
@@ -76,6 +90,14 @@ export const TextUniversities = styled.p`
     color: ${blue};
     margin: 0;
     padding: 0 2% 0 0;
+    font-size: .6rem;
+    @media(min-width: 640px){
+      font-size: .8rem;
+  }
+
+    @media(min-width: 1024px){
+      font-size: 1rem;
+  }
 `
 
 export const TextUniversity = styled.p`
