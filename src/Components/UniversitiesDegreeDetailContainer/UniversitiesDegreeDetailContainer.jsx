@@ -36,16 +36,21 @@ export const UniversitiesDegreeDetailContainer = () => {
     }, [carrera]);
   
     const handleSearch = (searchTerm) => {
-        const resultado = universities.filter((university) => {
+      const resultado = universities.filter((university) => {
+        if (university.carreras && university.carreras[carrera]) {
+          const carreraData = university.carreras[carrera];
           return (
             university.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            //university.carrera.duracion.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            //university.carrera.tipoCursada.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            (carreraData && carreraData.tipoCursada.toLowerCase().includes(searchTerm.toLowerCase())) ||
+            (carreraData && carreraData.duracion.toLowerCase().includes(searchTerm.toLowerCase())) ||
             university.type.toLowerCase().includes(searchTerm.toLowerCase())
           );
-        });
-        setUniversities(resultado);
-      };
+        }
+        return false;
+      });
+      setUniversities(resultado);
+    };
+    
   
     return (
       <>

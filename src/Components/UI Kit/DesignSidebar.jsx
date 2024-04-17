@@ -60,6 +60,7 @@ export const SearchSidebar = styled.input`
     height: 1rem;
     margin: 0;
     font-size: .5rem;
+    font-family: "poppins";
     @media(min-width: 1024px){
     width: 10rem;
     height: 1.5rem;
