@@ -4,7 +4,7 @@ import {blue, white} from "../UI Kit/Variables";
 
 export const VocationBanner = styled.div`
     width: 100%;
-    height: 80vh;
+    height: 50vh;
     background-image: url(${FotoTest});
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,6 +14,9 @@ export const VocationBanner = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media(min-width: 1024px){
+    height: 80vh;
+}
 `
 
 export const VocationContainer = styled.div`
@@ -46,7 +49,7 @@ export const ButtonTest = styled.a`
     width: 70%;
     margin: 4% auto;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: center;
     padding: 3% 0;
     font-size: 1rem;
@@ -55,6 +58,7 @@ export const ButtonTest = styled.a`
     box-shadow: 2px 2px rgb(0 0 0 / 0.5);
     @media(min-width: 1024px){ 
     width: 40%;
+    border-radius: 20px;
 }
 `
 export const VocationExplain = styled.div`
