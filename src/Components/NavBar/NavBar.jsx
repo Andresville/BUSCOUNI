@@ -23,7 +23,7 @@ export const NavBar = () => {
                 <NavLink to={'/'}>
                 <NavBarP>Comparador</NavBarP>
                 </NavLink>
-                <NavLink to={'/'}>
+                <NavLink to={'/vocation'}>
                 <NavBarP>Test Vocacional</NavBarP>
                 </NavLink>
                 </NavBarLi>

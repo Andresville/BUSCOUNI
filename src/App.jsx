@@ -6,6 +6,7 @@ import { Universities } from "./Components/Universities/Universities";
 import { UniversityDetailContainer } from './Components/UniversityDetailContainer/UniversityDetailContainer';
 import { UniversitiesDegreeDetailContainer } from './Components/UniversitiesDegreeDetailContainer/UniversitiesDegreeDetailContainer';
 import { Footer } from './Components/Footer/Footer';
+import { Vocation } from './Components/Vocation/Vocation';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Route path="/universities" element={<Universities />} />
       <Route path="/universities/:name" element={<UniversityDetailContainer />} />
       <Route path="/universities-degree/:carrera" element={<UniversitiesDegreeDetailContainer />} />
+      <Route path="/vocation" element={<Vocation />} />
       </Routes>
       <footer>
       <Footer />
