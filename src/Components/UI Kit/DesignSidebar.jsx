@@ -8,6 +8,8 @@ export const SidebarContainer = styled.div`
     background-color: ${blue};
     margin-top: 1%;
     padding: 0%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
     @media(min-width: 768px){
     width: 20%;
     margin-top: 5%;
@@ -48,7 +50,19 @@ export const DropdownList = styled.li`
 export const Down = styled.img`
     width: 20%;
     height: 20%;
-    @media(max-width: 425px){
+    @media(min-width: 425px){
     
+  }
+`
+
+export const SearchSidebar = styled.input`
+    width: 5rem;
+    height: 1rem;
+    margin: 0;
+    font-size: .5rem;
+    @media(min-width: 1024px){
+    width: 10rem;
+    height: 1.5rem;
+    font-size: .8rem;
   }
 `

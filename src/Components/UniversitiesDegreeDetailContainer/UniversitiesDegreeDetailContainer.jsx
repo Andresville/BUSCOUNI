@@ -10,45 +10,58 @@ import { Siderbar } from "../Sidebar/Siderbar";
 export const UniversitiesDegreeDetailContainer = () => {
     const { carrera } = useParams();
     const [universities, setUniversities] = useState([]);
-
+  
     useEffect(() => {
-        const getUniversitiesDB = async () => {
-            try {
-                if (!carrera) {
-                    console.log("El parámetro 'carrera' está vacío.");
-                    return;
-                }
-
-                const universitiesRef = collection(db, "universities");
-                const q = query(universitiesRef, where(`carreras.${carrera}`, "!=", null));
-                const querySnapshot = await getDocs(q);
-                const universityList = [];
-                querySnapshot.forEach((doc) => {
-                    universityList.push(doc.data());
-                });
-                setUniversities(universityList);
-            } catch (error) {
-                console.error("Error al obtener la carrera:", error);
-            }
-        };
-
-        getUniversitiesDB();
+      const getUniversitiesDB = async () => {
+        try {
+          if (!carrera) {
+            console.log("El parámetro 'carrera' está vacío.");
+            return;
+          }
+  
+          const universitiesRef = collection(db, "universities");
+          const q = query(universitiesRef, where(`carreras.${carrera}`, "!=", null));
+          const querySnapshot = await getDocs(q);
+          const universityList = [];
+          querySnapshot.forEach((doc) => {
+            universityList.push(doc.data());
+          });
+          setUniversities(universityList);
+        } catch (error) {
+          console.error("Error al obtener la carrera:", error);
+        }
+      };
+  
+      getUniversitiesDB();
     }, [carrera]);
-
+  
+    const handleSearch = (searchTerm) => {
+        const resultado = universities.filter((university) => {
+          return (
+            university.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            //university.carrera.duracion.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            //university.carrera.tipoCursada.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            university.type.toLowerCase().includes(searchTerm.toLowerCase())
+          );
+        });
+        setUniversities(resultado);
+      };
+  
     return (
-        <>
-            <Container>
-                <Siderbar />
-                <ContainerCard>
-                    {universities.length > 0 ? (
-                        universities.map((university, index) => (
-                            <University key={index} {...university} carrera={carrera}/>
-                        ))
-                    ) : (
-                        <p>Cargando Universidades</p>
-                    )}
-                </ContainerCard>
-            </Container>
-        </>
+      <>
+        <Container>
+          <Siderbar onSearch={handleSearch} />
+          <ContainerCard>
+            {universities.length > 0 ? (
+              universities.map((university, index) => (
+                <University key={index} {...university} carrera={carrera} />
+              ))
+            ) : (
+              <p>Cargando Universidades</p>
+            )}
+          </ContainerCard>
+        </Container>
+      </>
     );
-};
+  };
+  

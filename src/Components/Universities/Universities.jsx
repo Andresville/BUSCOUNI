@@ -27,16 +27,14 @@ export const Universities = () => {
       .catch(error => console.log(error));
   };
 
-  const handleChange = (e) => {
-    setBusqueda(e.target.value);
-    filtrar(e.target.value);
-  };
-
-  const filtrar = (terminoBusqueda) => {
-    var resultado = tablaUniversities.filter((university) => {
-      if (university.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())) {
-        return university;
-      }
+  const handleSearch = (searchTerm) => {
+    const resultado = universities.filter((university) => {
+      return (
+        university.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        //university.carrera.duracion.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        //university.carrera.tipoCursada.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        university.type.toLowerCase().includes(searchTerm.toLowerCase())
+      );
     });
     setUniversities(resultado);
   };
@@ -51,15 +49,8 @@ export const Universities = () => {
   return (
     <>
       <Container>
-        <Siderbar />
+        <Siderbar onSearch={handleSearch} />
         <ContainerCard>
-          <div>
-            <button>Buscar por nombre</button>
-            <input
-              value={busqueda}
-              onChange={handleChange}
-            />
-          </div>
           {universities.map(university => (
             <UniversitiesDetailContainer key={university.id} {...university} />
           ))}
