@@ -42,7 +42,7 @@ export const Siderbar = ({ onSearch }) => {
           <SearchSidebar
           value={modalidad}
           onChange={handleModalidadChange}
-          placeholder="Modalidad"
+          placeholder="Presencial/Distancia"
         />
         </DropdownList>
         

@@ -2,13 +2,15 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../../Config/firebaseConfig.js";
 import { seedUniversities } from "../Utils/SeedUniversity.js";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { UniversitiesDetailContainer } from "../UniversitiesDetailContainer/UniversitiesDetailContainer.jsx";
 import { Container, ContainerCard } from "../UI Kit/DesignUniversitiesDetailContainer.jsx";
 import { Siderbar } from "../Sidebar/Siderbar.jsx";
 
 export const Universities = () => {
   const { name } = useParams();
+  const location = useLocation();
+  const showFullDetail = location.pathname !== "/universities/:name";
   const [universities, setUniversities] = useState([]);
   const [tablaUniversities, setTablaUniversities] = useState([]);
   const [busqueda, setBusqueda] = useState("");
@@ -52,7 +54,11 @@ export const Universities = () => {
         <Siderbar onSearch={handleSearch} />
         <ContainerCard>
           {universities.map(university => (
-            <UniversitiesDetailContainer key={university.id} {...university} />
+            <UniversitiesDetailContainer
+              key={university.id}
+              {...university}
+              showFullDetail={showFullDetail}
+            />
           ))}
         </ContainerCard>
       </Container>

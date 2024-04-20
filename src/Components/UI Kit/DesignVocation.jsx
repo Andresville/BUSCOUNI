@@ -21,13 +21,14 @@ export const VocationBanner = styled.div`
 
 export const VocationContainer = styled.div`
     width: 80%;
-    height: 80vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     @media(min-width: 1024px){
     width: 50%;
+    height: 80vh;
 }
 `
 

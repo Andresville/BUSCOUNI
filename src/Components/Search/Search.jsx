@@ -17,6 +17,11 @@ export const Search = () => {
     window.location.href = searchTerm;
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
 
   console.log(carrera);
   console.log(universidad);
@@ -29,14 +34,16 @@ export const Search = () => {
         placeholder="Busca por carrera" 
         value={carrera}
         onChange={(e) => setCarrera(e.target.value)}
+        onKeyDown={handleKeyDown}
           />
         <InputSearch type="text" 
         placeholder="Busca por universidad"
         value={universidad}
         onChange={(e) => setUniversidad(e.target.value)}
+        onKeyDown={handleKeyDown}
          />
         <ButtonSearch onClick={handleSearch}>Buscar</ButtonSearch>
         </InputSearchContainer>
     </SearchContainer>
   )
-}
+};

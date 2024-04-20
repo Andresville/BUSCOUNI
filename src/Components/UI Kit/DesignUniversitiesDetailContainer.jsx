@@ -15,8 +15,8 @@ export const ContainerCard = styled.div`
     width: 100%;
     margin: 2% 0 0 0;
     @media(min-width: 1024px){
-    width: 60%;
-    margin: 5% 0 0 15%;
+    width: 70%;
+    margin: 5% auto 0 8%;
   }
 `
 
@@ -34,11 +34,31 @@ export const DetailContainer = styled.div`
   }
 `
 
+export const DetailContainerName = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    margin: 2% auto 0 auto;
+    padding: 1% 0 0 1%;
+    @media(min-width: 1024px){
+    margin: 1% 0;
+  }
+`
+
 export const LogoUniversities = styled.img`
     width: 15%;
     height: auto;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+`
+
+export const LogoUniversitiesName = styled.img`
+    width: 15%;
+    height: auto;
 `
 
 export const LogoUniversity = styled.img`
