@@ -4,7 +4,7 @@ import { db } from "../../Config/firebaseConfig.js";
 import { seedUniversities } from "../Utils/SeedUniversity.js";
 import { useLocation, useParams } from "react-router-dom";
 import { UniversitiesDetailContainer } from "../UniversitiesDetailContainer/UniversitiesDetailContainer.jsx";
-import { Container, ContainerCard } from "../UI Kit/DesignUniversitiesDetailContainer.jsx";
+import { Container, ContainerCard, TitleUniversities } from "../UI Kit/DesignUniversitiesDetailContainer.jsx";
 import { Siderbar } from "../Sidebar/Siderbar.jsx";
 
 export const Universities = () => {
@@ -53,6 +53,7 @@ export const Universities = () => {
       <Container>
         <Siderbar onSearch={handleSearch} />
         <ContainerCard>
+        <TitleUniversities>Universidades</TitleUniversities>
           {universities.map(university => (
             <UniversitiesDetailContainer
               key={university.id}

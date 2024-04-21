@@ -16,7 +16,7 @@ export const ContainerCard = styled.div`
     margin: 2% 0 0 0;
     @media(min-width: 1024px){
     width: 70%;
-    margin: 5% auto 0 8%;
+    margin: 0.5% auto 0 8%;
   }
 `
 
@@ -34,31 +34,11 @@ export const DetailContainer = styled.div`
   }
 `
 
-export const DetailContainerName = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 90%;
-    height: auto;
-    background-color: white;
-    border-radius: 10px;
-    margin: 2% auto 0 auto;
-    padding: 1% 0 0 1%;
-    @media(min-width: 1024px){
-    margin: 1% 0;
-  }
-`
-
 export const LogoUniversities = styled.img`
     width: 15%;
     height: auto;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-`
-
-export const LogoUniversitiesName = styled.img`
-    width: 15%;
-    height: auto;
 `
 
 export const LogoUniversity = styled.img`
@@ -103,16 +83,21 @@ export const TextContainerUniversity = styled.div`
 
 export const TextUniversityContainer = styled.div`
     margin: 0;
-    padding: 0 2% 0 0;
+    padding: 1% 2% 0 0;
+    @media(min-width: 640px){
+      font-size: .8rem;
+      padding: 0 2% 0 0;
+}
 `
 
 export const TextUniversities = styled.p`
     color: ${blue};
     margin: 0;
-    padding: 0 2% 0 0;
+    padding: 1% 2% 1% 0;
     font-size: .6rem;
     @media(min-width: 640px){
       font-size: .8rem;
+      padding: 0 2% 0 0;
   }
 
     @media(min-width: 1024px){
@@ -125,4 +110,49 @@ export const TextUniversity = styled.p`
     margin: 0;
     padding: 0 2% .5% 0;
     font-size: .6rem;
+`
+//DISEÑO PAGINA DETALLE UNIVERSIDAD 
+
+export const DetailContainerName = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    margin: 2% auto 0 auto;
+    padding: 1% 0 2% 1%;
+    @media(min-width: 1024px){
+    margin: 0;
+  }
+`
+
+export const LogoUniversitiesName = styled.img`
+    width: 30%;
+    height: auto;
+    padding: 0;
+`
+
+export const DetailDatesName  = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    margin: 1% 0;
+    @media(min-width: 1024px){
+    
+  }
+  `
+
+export const TitleUniversitiesName = styled.h3`
+color: ${blue};
+margin: 0;
+padding: 1% 0;
+font-size: .6rem;
+@media(min-width: 1024px){
+font-size: 1rem;
+}
 `

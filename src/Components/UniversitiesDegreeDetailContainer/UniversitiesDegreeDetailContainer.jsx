@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { db } from "../../Config/firebaseConfig";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { University } from "../University/University";
-import { Container, ContainerCard } from "../UI Kit/DesignUniversitiesDetailContainer";
+import { Container, ContainerCard, TitleUniversities } from "../UI Kit/DesignUniversitiesDetailContainer";
 import { Siderbar } from "../Sidebar/Siderbar";
 
 
@@ -57,6 +57,7 @@ export const UniversitiesDegreeDetailContainer = () => {
         <Container>
           <Siderbar onSearch={handleSearch} />
           <ContainerCard>
+          <TitleUniversities>Carrera de {carrera}({universities.length})</TitleUniversities>
             {universities.length > 0 ? (
               universities.map((university, index) => (
                 <University key={index} {...university} carrera={carrera} />
