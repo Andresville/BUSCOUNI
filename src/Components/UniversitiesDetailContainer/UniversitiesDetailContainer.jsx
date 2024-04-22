@@ -1,4 +1,4 @@
-import { DetailContainer, DetailContainerName, DetailContainerUniversities, DetailDatesName, LogoUniversities, LogoUniversitiesName, TextContainerUniversities, TextUniversities, TextUniversityContainer, TitleUniversities, TitleUniversitiesName } from "../UI Kit/DesignUniversitiesDetailContainer";
+import { DetailContainer, DetailContainerName, DetailContainerUniversities, DetailDatesName, LogoUniversities, LogoUniversitiesName, TextContainerUniversities, TextContainerUniversitiesName, TextUniversities, TextUniversitiesName, TextUniversityContainer, TitleUniversities, TitleUniversities1, TitleUniversitiesName } from "../UI Kit/DesignUniversitiesDetailContainer";
 
 export const UniversitiesDetailContainer = ({ urlUniversity, name1, carreras, type, correo, descripcion, direccion, mision, modalidades, telefono, telefono1, vision, web, showFullDetail }) => {
     const carrerasArray = Object.keys(carreras).map(key => ({
@@ -14,31 +14,31 @@ export const UniversitiesDetailContainer = ({ urlUniversity, name1, carreras, ty
                     <DetailDatesName>
                         <LogoUniversitiesName src={urlUniversity} alt="" />
                         <DetailContainerUniversities>
-                            <TitleUniversities>{name1}</TitleUniversities>
-                            <TextUniversities>Direccion: {direccion}</TextUniversities>
-                            <TextUniversities>Telefono: {telefono}</TextUniversities>
-                            <TextUniversities>Telefono: {telefono1}</TextUniversities>
-                            <TextUniversities>Email: {correo}</TextUniversities>
-                            <TextUniversities>Web: {web}</TextUniversities>
+                            <TitleUniversities1>{name1}</TitleUniversities1>
+                            <TextUniversitiesName>Direccion: {direccion}</TextUniversitiesName>
+                            <TextUniversitiesName>Telefono: {telefono}</TextUniversitiesName>
+                            <TextUniversitiesName>Telefono: {telefono1}</TextUniversitiesName>
+                            <TextUniversitiesName>Email: {correo}</TextUniversitiesName>
+                            <TextUniversitiesName>Web: {web}</TextUniversitiesName>
                         </DetailContainerUniversities>
                     </DetailDatesName>
-                    <TextUniversities>{descripcion}</TextUniversities>
+                    <TextUniversitiesName>{descripcion}</TextUniversitiesName>
                     <TitleUniversitiesName>Mision:</TitleUniversitiesName>
-                    <TextUniversities>{mision}</TextUniversities>
+                    <TextUniversitiesName>{mision}</TextUniversitiesName>
                     <TitleUniversitiesName>Vision:</TitleUniversitiesName>
-                    <TextUniversities>{vision}</TextUniversities>
+                    <TextUniversitiesName>{vision}</TextUniversitiesName>
                     <TitleUniversitiesName>Modalidad:</TitleUniversitiesName>
-                    <TextUniversities>{modalidades}</TextUniversities>
+                    <TextUniversitiesName>{modalidades}</TextUniversitiesName>
                     <TitleUniversitiesName>Carreras:</TitleUniversitiesName>
-                    <TextContainerUniversities>
+                    <TextContainerUniversitiesName>
                         {carrerasArray.map((carrera, index) => (
                             <TextUniversityContainer key={index}>
-                                <TextUniversities>{carrera.nombre}</TextUniversities>
+                                <TextUniversitiesName>{carrera.nombre}</TextUniversitiesName>
                             </TextUniversityContainer>
                         ))}
-                    </TextContainerUniversities>
+                    </TextContainerUniversitiesName>
                     <TitleUniversitiesName>Tipo de Universidad:</TitleUniversitiesName>
-                    <TextUniversities>{type}</TextUniversities>
+                    <TextUniversitiesName>{type}</TextUniversitiesName>
                 </DetailContainerName>
             </>
         )

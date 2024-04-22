@@ -122,7 +122,7 @@ export const DetailContainerName = styled.div`
     background-color: white;
     border-radius: 10px;
     margin: 2% auto 0 auto;
-    padding: 1% 0 2% 1%;
+    padding: 1% 0 2% 0;
     @media(min-width: 1024px){
     margin: 0;
   }
@@ -131,7 +131,8 @@ export const DetailContainerName = styled.div`
 export const LogoUniversitiesName = styled.img`
     width: 30%;
     height: auto;
-    padding: 0;
+    padding: 1% ;
+    border-radius: 8%;
 `
 
 export const DetailDatesName  = styled.div`
@@ -150,9 +151,36 @@ export const DetailDatesName  = styled.div`
 export const TitleUniversitiesName = styled.h3`
 color: ${blue};
 margin: 0;
-padding: 1% 0;
+padding: .8% 2%;
 font-size: .6rem;
 @media(min-width: 1024px){
 font-size: 1rem;
 }
+`
+
+export const TextUniversitiesName = styled.p`
+    color: ${blue};
+    margin: 0;
+    padding: 0.8% 2%;
+    font-size: .6rem;
+    @media(min-width: 640px){
+      font-size: .8rem;
+  }
+`
+
+export const TextContainerUniversitiesName = styled.div`
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: .8% 2%;
+`
+
+export const TitleUniversities1 = styled.h3`
+    color: ${blue};
+    margin: 0;
+    padding: 2% 0 1% 2%;
+    font-size: .8rem;
+    @media(min-width: 1024px){
+    font-size: 1.2rem;
+  }
 `
