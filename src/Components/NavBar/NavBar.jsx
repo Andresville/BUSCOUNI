@@ -15,16 +15,16 @@ export const NavBar = () => {
                     <NavBarP>Inicio</NavBarP>
                 </NavLink>
                 <NavLink to={'/'}>
-                <NavBarP>Sobre Nosotros</NavBarP>
+                    <NavBarP>Sobre Nosotros</NavBarP>
                 </NavLink>
                 <NavLink to={'/universities'}>
                     <NavBarP>Buscar UNI</NavBarP>
                 </NavLink>
                 <NavLink to={'/'}>
-                <NavBarP>Comparador</NavBarP>
+                    <NavBarP>Comparador</NavBarP>
                 </NavLink>
                 <NavLink to={'/vocation'}>
-                <NavBarP>Test Vocacional</NavBarP>
+                    <NavBarP>Test Vocacional</NavBarP>
                 </NavLink>
                 </NavBarLi>
             </NavBarUl>

@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import { DetailContainer, DetailContainerUniversities, LogoUniversity, TextContainerUniversity, TextUniversities, TextUniversity, TitleUniversities } from "../UI Kit/DesignUniversitiesDetailContainer";
 
-export const University = ({ urlUniversity, name1, carreras, type, carrera }) => {
+export const University = ({ urlUniversity, name1, carreras, type, carrera, name }) => {
     const carreraData = carreras[carrera]; 
 
     if (!carreraData) {
@@ -21,6 +22,9 @@ export const University = ({ urlUniversity, name1, carreras, type, carrera }) =>
                         <TextUniversity>Título: {carreraData.titulo}</TextUniversity>
                     </TextContainerUniversity>
                     <TextUniversity>Tipo de Universidad: {type}</TextUniversity>
+                    <Link to={`/universities-degree/${carrera}/${name}`}>
+                        <button>Más Información</button>
+                    </Link>
                 </DetailContainerUniversities>
             </DetailContainer>
         </>

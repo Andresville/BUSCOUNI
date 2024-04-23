@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {blue, white} from "../UI Kit/Variables";
+import {blue} from "../UI Kit/Variables";
 
 export const TitleDegree = styled.h3`
     margin: 3% auto;
